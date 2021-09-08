@@ -1,0 +1,65 @@
+
+some config above
+ 
+
+crypto map eccvpn 10 ipsec-isakmp
+ description xxx
+ set peer 8.8.8.8
+ set transform-set 3des-md5
+ match address xxx
+
+crypto map eccvpn 15 ipsec-isakmp
+ description xxx
+ set peer 8.8.8.8
+ set transform-set 3des-md5
+ match address xxx
+
+crypto map eccvpn 20 ipsec-isakmp
+ description xxx
+ set peer 8.8.8.8
+ set transform-set 3des-sha
+ match address xxx
+
+crypto map eccvpn 25 ipsec-isakmp
+ description xxx
+ set peer 8.8.8.8
+ set transform-set 3des-md5
+ match address xxx
+
+crypto map eccvpn 30 ipsec-isakmp
+ description xxx
+ set peer 8.8.8.8
+ set transform-set 3des-sha
+ set pfs group2
+ match address xxx
+
+crypto map eccvpn 35 ipsec-isakmp
+ description xxx
+ set peer 8.8.8.8
+ set transform-set aes256-sha
+ match address xxx
+
+ 
+ some config at the middle
+
+=============================
+
+new OK parameters:
+
+crypto map eccvpn xxx ipsec-isakmp
+ description xxx
+ set peer 8.8.8.8
+ set security-association lifetime seconds 86400
+ set transform-set aes256-sha256
+ set ikev2-profile xxx
+ match address xxx
+
+ 
+crypto map eccvpn xxx ipsec-isakmp
+ description xxx
+ set peer 8.8.8.8
+ set transform-set aes256-sha256
+ set ikev2-profile xxx
+ match address xxx
+
+ some config below
